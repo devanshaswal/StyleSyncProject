@@ -66,6 +66,11 @@ class FashionDataset(Dataset):
             logger.error(f"Failed to load metadata: {str(e)}")
             raise
         
+        # if exclude_categories is not None:
+        #     logger.info(f"Excluding categories: {exclude_categories}")
+        #     self.metadata = self.metadata[~self.metadata['category_label'].isin(exclude_categories)]
+        #     logger.info(f"Filtered metadata contains {len(self.metadata)} entries")
+
         # Store paths
         self.cropped_images_dir = cropped_images_dir
         self.heatmaps_dir = heatmaps_dir
@@ -286,63 +291,63 @@ class FashionDataset(Dataset):
         return stats
 
 # Example usage
-if __name__ == "__main__":
-    # Path configuration
-    metadata_path = "data/processed/metadata_updated.csv"
-    cropped_images_dir = "data/processed/cropped_images"
-    heatmaps_dir = "data/processed/heatmaps"
+# if __name__ == "__main__":
+#     # Path configuration
+#     metadata_path = "data/processed/metadata_updated.csv"
+#     cropped_images_dir = "data/processed/cropped_images"
+#     heatmaps_dir = "data/processed/heatmaps"
     
-    # Define transforms with augmentation for training
-    train_transform = transforms.Compose([
-        transforms.RandomHorizontalFlip(),
-        transforms.RandomRotation(10),
-        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                             std=[0.229, 0.224, 0.225])
-    ])
+#     # Define transforms with augmentation for training
+#     train_transform = transforms.Compose([
+#         transforms.RandomHorizontalFlip(),
+#         transforms.RandomRotation(10),
+#         transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+#         transforms.ToTensor(),
+#         transforms.Normalize(mean=[0.485, 0.456, 0.406],
+#                              std=[0.229, 0.224, 0.225])
+#     ])
     
-    logger.info("Creating dataset instance...")
+#     logger.info("Creating dataset instance...")
     
-    # Create dataset
-    dataset = FashionDataset(
-        metadata_path=metadata_path,
-        cropped_images_dir=cropped_images_dir,
-        heatmaps_dir=heatmaps_dir,
-        transform=train_transform,
-        use_cache=True,
-        cache_size=100,
-        validate_files=True
-    )
+#     # Create dataset
+#     dataset = FashionDataset(
+#         metadata_path=metadata_path,
+#         cropped_images_dir=cropped_images_dir,
+#         heatmaps_dir=heatmaps_dir,
+#         transform=train_transform,
+#         use_cache=True,
+#         cache_size=100,
+#         validate_files=True
+#     )
     
-    logger.info(f"Dataset initialized with {len(dataset)} samples")
+#     logger.info(f"Dataset initialized with {len(dataset)} samples")
     
-    # Get dataset statistics
-    stats = dataset.get_stats()
-    logger.info(f"Dataset statistics: {stats}")
+#     # Get dataset statistics
+#     stats = dataset.get_stats()
+#     logger.info(f"Dataset statistics: {stats}")
     
-    # Example batch
-    logger.info("Fetching sample batch...")
-    sample = dataset[0]
+#     # Example batch
+#     logger.info("Fetching sample batch...")
+#     sample = dataset[0]
     
-    logger.info("Sample keys: %s", sample.keys())
-    logger.info("Image shape: %s", sample['image'].shape)
-    logger.info("Heatmap shape: %s", sample['heatmap'].shape)
-    logger.info("Attributes shape: %s", sample['attributes'].shape)
-    logger.info("Category label: %s", sample['category_label'])
-    logger.info("Category type: %s", sample['category_type'])
+#     logger.info("Sample keys: %s", sample.keys())
+#     logger.info("Image shape: %s", sample['image'].shape)
+#     logger.info("Heatmap shape: %s", sample['heatmap'].shape)
+#     logger.info("Attributes shape: %s", sample['attributes'].shape)
+#     logger.info("Category label: %s", sample['category_label'])
+#     logger.info("Category type: %s", sample['category_type'])
     
-    # Test DataLoader
-    logger.info("Testing DataLoader...")
-    from torch.utils.data import DataLoader
+#     # Test DataLoader
+#     logger.info("Testing DataLoader...")
+#     from torch.utils.data import DataLoader
     
-    loader = DataLoader(dataset, batch_size=4, shuffle=True, num_workers=0)
+#     loader = DataLoader(dataset, batch_size=4, shuffle=True, num_workers=0)
     
-    for i, batch in enumerate(loader):
-        if i == 0:
-            logger.info(f"First batch shapes: Image {batch['image'].shape}, Heatmap {batch['heatmap'].shape}")
+#     for i, batch in enumerate(loader):
+#         if i == 0:
+#             logger.info(f"First batch shapes: Image {batch['image'].shape}, Heatmap {batch['heatmap'].shape}")
         
-        if i >= 2:  # Only test a few batches
-            break
+#         if i >= 2:  # Only test a few batches
+#             break
     
-    logger.info("DataLoader test completed successfully")
+#     logger.info("DataLoader test completed successfully")

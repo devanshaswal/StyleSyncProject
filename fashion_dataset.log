@@ -118,3 +118,294 @@
 2025-02-18 15:38:49,754 - FashionDataset - INFO - Testing DataLoader...
 2025-02-18 15:38:49,869 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
 2025-02-18 15:38:50,077 - FashionDataset - INFO - DataLoader test completed successfully
+2025-02-18 17:57:42,261 - TrainingScript - INFO - Using device: cpu
+2025-02-18 17:57:42,277 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Using transforms: Compose(
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 17:57:43,040 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 17:57:43,089 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 17:57:43,089 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 17:57:43,241 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 17:57:43,241 - FashionDataset - INFO - Using transforms: Compose(
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 17:57:43,241 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 17:57:43,257 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 17:57:43,257 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 17:57:43,257 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 17:57:43,299 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 17:57:43,299 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 17:57:43,299 - FashionHybridModel - INFO - Parameters: num_categories=46, num_category_types=3, num_attributes=50, embed_dim=256
+2025-02-18 17:57:49,720 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 17:57:49,720 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 17:57:49,720 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 17:57:49,720 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 17:57:49,720 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 17:57:49,734 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:11:40,550 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:11:40,550 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 18:11:41,377 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 18:11:41,377 - FashionDataset - INFO - Using transforms: Compose(
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:11:41,390 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:11:41,393 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:11:41,393 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:11:41,393 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:11:41,448 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:11:41,448 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Using transforms: Compose(
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:11:41,598 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:11:41,642 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:11:41,642 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 18:11:41,642 - FashionHybridModel - INFO - Parameters: num_categories=46, num_category_types=3, num_attributes=50, embed_dim=256
+2025-02-18 18:11:41,944 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 18:11:41,944 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 18:11:41,944 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 18:11:41,944 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 18:11:41,944 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 18:11:41,960 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:16:17,846 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:16:49,789 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:16:49,804 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 18:16:50,620 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 18:16:50,620 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:16:50,635 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:16:50,635 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:16:50,635 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:16:50,635 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:16:50,697 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:16:50,697 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:16:50,851 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:16:50,914 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:16:50,914 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 18:16:50,914 - FashionHybridModel - INFO - Parameters: num_categories=46, num_category_types=3, num_attributes=50, embed_dim=256
+2025-02-18 18:16:51,224 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 18:16:51,224 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 18:16:51,240 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 18:16:51,240 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 18:16:51,240 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 18:16:51,248 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:29:55,881 - FashionDataset - INFO - Creating dataset instance...
+2025-02-18 18:29:55,881 - FashionDataset - INFO - Initializing FashionDataset with metadata: data/processed/metadata_updated.csv
+2025-02-18 18:29:56,987 - FashionDataset - INFO - Loaded metadata with 289212 entries
+2025-02-18 18:29:56,987 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:29:56,991 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:29:56,991 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:29:56,995 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:29:56,995 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:29:57,050 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:29:57,053 - FashionDataset - INFO - Dataset initialized with 289212 samples
+2025-02-18 18:29:57,053 - FashionDataset - INFO - Calculating dataset statistics...
+2025-02-18 18:29:57,068 - FashionDataset - INFO - Dataset statistics: {'num_samples': 289212, 'num_attributes': 50, 'num_categories': 46, 'attribute_distributions': {'mesh': {0: 284103, 1: 5109}, 'slim': {0: 285717, 1: 3495}, 'hem': {0: 285800, 1: 3412}, 'hooded': {0: 285254, 1: 3958}, 'trim': {0: 284210, 1: 5002}}, 'category_distribution': {41: 72148, 18: 36887, 3: 24557, 32: 19666, 17: 15429, 33: 14773, 6: 13311, 16: 13123, 11: 10467, 19: 10078, 2: 7495, 48: 7408, 26: 7076, 42: 6153, 30: 5013, 29: 4416, 10: 4048, 34: 3048, 44: 2294, 39: 2120, 24: 1669, 35: 1106, 15: 791, 12: 748, 9: 716, 13: 676, 27: 594, 22: 527, 23: 486, 36: 386, 5: 330, 7: 324, 4: 309, 1: 160, 47: 150, 20: 146, 43: 126, 14: 97, 21: 77, 46: 70, 37: 54, 25: 49, 28: 45, 31: 32, 8: 17, 40: 17}, 'type_distribution': {1: 139709, 3: 90540, 2: 58963}}
+2025-02-18 18:29:57,069 - FashionDataset - INFO - Fetching sample batch...
+2025-02-18 18:29:57,087 - FashionDataset - INFO - Sample keys: dict_keys(['image', 'heatmap', 'attributes', 'category_label', 'category_type', 'image_name'])
+2025-02-18 18:29:57,091 - FashionDataset - INFO - Image shape: torch.Size([3, 224, 224])
+2025-02-18 18:29:57,091 - FashionDataset - INFO - Heatmap shape: torch.Size([1, 224, 224])
+2025-02-18 18:29:57,091 - FashionDataset - INFO - Attributes shape: torch.Size([50])
+2025-02-18 18:29:57,091 - FashionDataset - INFO - Category label: tensor(18)
+2025-02-18 18:29:57,093 - FashionDataset - INFO - Category type: tensor(1)
+2025-02-18 18:29:57,094 - FashionDataset - INFO - Testing DataLoader...
+2025-02-18 18:29:57,208 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
+2025-02-18 18:29:57,419 - FashionDataset - INFO - DataLoader test completed successfully
+2025-02-18 18:34:03,121 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:34:03,121 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 18:34:04,002 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 18:34:04,006 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:34:04,006 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:34:04,006 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:34:04,006 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:34:04,010 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:34:04,064 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:34:04,064 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 18:34:04,210 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 18:34:04,210 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:34:04,225 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:34:04,225 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:34:04,225 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:34:04,225 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:34:04,272 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:34:04,272 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 18:34:04,272 - FashionHybridModel - INFO - Parameters: num_categories=50, num_category_types=3, num_attributes=50, embed_dim=256
+2025-02-18 18:34:04,596 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 18:34:04,596 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 18:34:04,596 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 18:34:04,596 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 18:34:04,612 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 18:34:04,614 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:45:02,497 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:45:02,513 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 18:45:03,323 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 18:45:03,323 - FashionDataset - INFO - Excluding categories: [38, 45, 49, 50]
+2025-02-18 18:45:03,371 - FashionDataset - INFO - Filtered metadata contains 209215 entries
+2025-02-18 18:45:03,371 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:45:03,371 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:45:03,378 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:45:03,378 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:45:03,379 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:45:03,422 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:45:03,422 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 18:45:03,574 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 18:45:03,574 - FashionDataset - INFO - Excluding categories: [38, 45, 49, 50]
+2025-02-18 18:45:03,590 - FashionDataset - INFO - Filtered metadata contains 39999 entries
+2025-02-18 18:45:03,590 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:45:03,590 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:45:03,594 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:45:03,595 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:45:03,595 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:45:03,642 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:45:03,642 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 18:45:03,643 - FashionHybridModel - INFO - Parameters: num_categories=50, num_category_types=3, num_attributes=50, embed_dim=256
+2025-02-18 18:45:03,948 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 18:45:03,964 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 18:45:03,964 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 18:45:03,964 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 18:45:03,964 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 18:45:03,974 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:48:01,977 - TrainingScript - INFO - Using device: cpu
+2025-02-18 18:48:01,977 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:48:02,730 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:48:02,778 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:48:02,778 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 18:48:02,935 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 18:48:02,992 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 18:48:02,992 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 18:48:02,992 - FashionHybridModel - INFO - Parameters: num_categories=50, num_category_types=4, num_attributes=50, embed_dim=256
+2025-02-18 18:48:03,336 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 18:48:03,336 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 18:48:03,336 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 18:48:03,336 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 18:48:03,336 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 18:48:03,353 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 18:48:07,139 - TrainingScript - INFO - Epoch: 0, Batch: 0/13076, Loss: 5.0983
+2025-02-18 18:48:43,467 - TrainingScript - INFO - Epoch: 0, Batch: 10/13076, Loss: 3.9706
+2025-02-18 18:49:20,019 - TrainingScript - INFO - Epoch: 0, Batch: 20/13076, Loss: 3.5464
+2025-02-18 18:49:56,043 - TrainingScript - INFO - Epoch: 0, Batch: 30/13076, Loss: 3.4631
+2025-02-18 18:50:32,576 - TrainingScript - INFO - Epoch: 0, Batch: 40/13076, Loss: 3.2587
+2025-02-18 18:51:10,187 - TrainingScript - INFO - Epoch: 0, Batch: 50/13076, Loss: 2.6307
+2025-02-18 18:51:49,318 - TrainingScript - INFO - Epoch: 0, Batch: 60/13076, Loss: 3.3453
+2025-02-18 18:52:30,081 - TrainingScript - INFO - Epoch: 0, Batch: 70/13076, Loss: 2.9365
+2025-02-18 18:53:08,572 - TrainingScript - INFO - Epoch: 0, Batch: 80/13076, Loss: 3.3751
+2025-02-18 18:53:46,032 - TrainingScript - INFO - Epoch: 0, Batch: 90/13076, Loss: 3.1477
+2025-02-18 20:43:02,186 - TrainingScript - INFO - Using device: cpu
+2025-02-18 20:43:02,202 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_train.csv
+2025-02-18 20:43:03,225 - FashionDataset - INFO - Loaded metadata with 209215 entries
+2025-02-18 20:43:03,225 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 20:43:03,225 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 20:43:03,242 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 20:43:03,242 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 20:43:03,242 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 20:43:03,289 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 20:43:03,289 - FashionDataset - INFO - Initializing FashionDataset with metadata: X:\dissertation\StyleSyncProject\zsehran\metadata_updated_val.csv
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Loaded metadata with 39999 entries
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 20:43:03,543 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 20:43:03,622 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 20:43:03,622 - FashionHybridModel - INFO - Initializing FashionHybridModel with resnet50 backbone
+2025-02-18 20:43:03,622 - FashionHybridModel - INFO - Parameters: num_categories=50, num_category_types=4, num_attributes=50, embed_dim=256
+2025-02-18 20:43:04,131 - FashionHybridModel - INFO - Initialized resnet50 backbone with feature dimension: 2048
+2025-02-18 20:43:04,131 - FashionHybridModel - INFO - Heatmap encoder initialized with output dimension: 256
+2025-02-18 20:43:04,146 - FashionHybridModel - INFO - Attribute encoder initialized with output dimension: 64
+2025-02-18 20:43:04,146 - FashionHybridModel - INFO - Total feature dimension after concatenation: 2368
+2025-02-18 20:43:04,146 - FashionHybridModel - INFO - Model initialization complete
+2025-02-18 20:43:04,146 - FashionHybridModel - INFO - Multi-task loss initialized with weights: category=1.0, category_type=0.5, attribute=0.3, compatibility=0.2
+2025-02-18 20:43:09,289 - TrainingScript - INFO - Epoch: 0, Batch: 0/13076, Loss: 5.0885
