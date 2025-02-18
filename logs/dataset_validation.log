@@ -1,0 +1,32 @@
+2025-02-15 04:22:21 - __main__ - INFO - Loading metadata from data/processed/metadata.csv
+2025-02-15 04:22:21 - __main__ - INFO - Starting heatmap validation...
+2025-02-15 04:22:37 - __main__ - INFO - Heatmap validation completed in 15.27 seconds
+2025-02-15 04:22:37 - __main__ - INFO - Found 289212 missing heatmaps
+2025-02-15 04:22:37 - __main__ - INFO - Found 0 corrupted heatmaps
+2025-02-15 04:22:38 - __main__ - INFO - Validation reports saved to validation_results
+2025-02-15 04:22:38 - __main__ - INFO - Dataset validation completed successfully
+2025-02-15 04:26:20 - __main__ - INFO - Loading metadata from data/processed/metadata.csv
+2025-02-15 04:26:21 - __main__ - INFO - Starting image validation...
+2025-02-15 04:31:56 - __main__ - INFO - Loading metadata from data/processed/metadata.csv
+2025-02-15 04:31:57 - __main__ - INFO - Starting heatmap validation...
+2025-02-15 04:32:03 - __main__ - ERROR - Dataset validation failed
+Traceback (most recent call last):
+  File "x:\dissertation\StyleSyncProject\utils\dataset_validator.py", line 188, in <module>
+    validator.validate_heatmaps()
+  File "x:\dissertation\StyleSyncProject\utils\dataset_validator.py", line 123, in validate_heatmaps
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "x:\dissertation\StyleSyncProject\utils\dataset_validator.py", line 74, in _validate_heatmap
+    heatmap_files = glob.glob(str(self.heatmaps_dir / "**" / f"{image_stem}.npy"), recursive=True)
+                    ^^^^
+NameError: name 'glob' is not defined. Did you forget to import 'glob'
+2025-02-15 04:32:26 - __main__ - INFO - Loading metadata from data/processed/metadata.csv
+2025-02-15 04:32:27 - __main__ - INFO - Starting heatmap validation...

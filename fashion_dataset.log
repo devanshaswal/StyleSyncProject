@@ -1,0 +1,120 @@
+2025-02-17 20:12:22,056 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:12:22,056 - FashionDataset - INFO - Initializing FashionDataset with metadata: dataset/processed/metadata_updated.csv
+2025-02-17 20:12:22,056 - FashionDataset - ERROR - Metadata file not found: dataset/processed/metadata_updated.csv
+2025-02-17 20:18:29,290 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:18:29,290 - FashionDataset - INFO - Initializing FashionDataset with metadata: dataset/processed/metadata_updated.csv
+2025-02-17 20:18:29,290 - FashionDataset - ERROR - Metadata file not found: dataset/processed/metadata_updated.csv
+2025-02-17 20:19:51,949 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:19:51,949 - FashionDataset - INFO - Initializing FashionDataset with metadata: dataset/processed/metadata_updated.csv
+2025-02-17 20:22:25,046 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:22:25,046 - FashionDataset - INFO - Initializing FashionDataset with metadata: data/processed/metadata_updated.csv
+2025-02-17 20:22:26,203 - FashionDataset - INFO - Loaded metadata with 289212 entries
+2025-02-17 20:22:26,203 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-17 20:22:26,203 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-17 20:22:26,213 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-17 20:22:26,213 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-17 20:22:26,214 - FashionDataset - INFO - Validating dataset files...
+2025-02-17 20:22:26,265 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-17 20:22:26,265 - FashionDataset - INFO - Dataset initialized with 289212 samples
+2025-02-17 20:22:26,265 - FashionDataset - INFO - Calculating dataset statistics...
+2025-02-17 20:22:26,282 - FashionDataset - INFO - Dataset statistics: {'num_samples': 289212, 'num_attributes': 50, 'num_categories': 46, 'attribute_distributions': {'mesh': {0: 284103, 1: 5109}, 'slim': {0: 285717, 1: 3495}, 'hem': {0: 285800, 1: 3412}, 'hooded': {0: 285254, 1: 3958}, 'trim': {0: 284210, 1: 5002}}, 'category_distribution': {41: 72148, 18: 36887, 3: 24557, 32: 19666, 17: 15429, 33: 14773, 6: 13311, 16: 13123, 11: 10467, 19: 10078, 2: 7495, 48: 7408, 26: 7076, 42: 6153, 30: 5013, 29: 4416, 10: 4048, 34: 3048, 44: 2294, 39: 2120, 24: 1669, 35: 1106, 15: 791, 12: 748, 9: 716, 13: 676, 27: 594, 22: 527, 23: 486, 36: 386, 5: 330, 7: 324, 4: 309, 1: 160, 47: 150, 20: 146, 43: 126, 14: 97, 21: 77, 46: 70, 37: 54, 25: 49, 28: 45, 31: 32, 8: 17, 40: 17}, 'type_distribution': {1: 139709, 3: 90540, 2: 58963}}
+2025-02-17 20:22:26,282 - FashionDataset - INFO - Fetching sample batch...
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Sample keys: dict_keys(['image', 'heatmap', 'attributes', 'category_label', 'category_type', 'image_name'])
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Image shape: torch.Size([3, 224, 224])
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Heatmap shape: torch.Size([1, 224, 224])
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Attributes shape: torch.Size([50])
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Category label: tensor(18)
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Category type: tensor(1)
+2025-02-17 20:22:26,414 - FashionDataset - INFO - Testing DataLoader...
+2025-02-17 20:22:26,543 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
+2025-02-17 20:22:26,738 - FashionDataset - INFO - DataLoader test completed successfully
+2025-02-17 20:28:13,479 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:28:13,479 - FashionDataset - INFO - Initializing FashionDataset with metadata: data/processed/metadata_updated.csv
+2025-02-17 20:28:14,832 - FashionDataset - INFO - Loaded metadata with 289212 entries
+2025-02-17 20:28:14,833 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-17 20:28:14,833 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-17 20:28:14,836 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-17 20:28:14,837 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-17 20:28:14,837 - FashionDataset - INFO - Validating dataset files...
+2025-02-17 20:28:14,894 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-17 20:28:14,894 - FashionDataset - INFO - Dataset initialized with 289212 samples
+2025-02-17 20:28:14,894 - FashionDataset - INFO - Calculating dataset statistics...
+2025-02-17 20:28:14,909 - FashionDataset - INFO - Dataset statistics: {'num_samples': 289212, 'num_attributes': 50, 'num_categories': 46, 'attribute_distributions': {'mesh': {0: 284103, 1: 5109}, 'slim': {0: 285717, 1: 3495}, 'hem': {0: 285800, 1: 3412}, 'hooded': {0: 285254, 1: 3958}, 'trim': {0: 284210, 1: 5002}}, 'category_distribution': {41: 72148, 18: 36887, 3: 24557, 32: 19666, 17: 15429, 33: 14773, 6: 13311, 16: 13123, 11: 10467, 19: 10078, 2: 7495, 48: 7408, 26: 7076, 42: 6153, 30: 5013, 29: 4416, 10: 4048, 34: 3048, 44: 2294, 39: 2120, 24: 1669, 35: 1106, 15: 791, 12: 748, 9: 716, 13: 676, 27: 594, 22: 527, 23: 486, 36: 386, 5: 330, 7: 324, 4: 309, 1: 160, 47: 150, 20: 146, 43: 126, 14: 97, 21: 77, 46: 70, 37: 54, 25: 49, 28: 45, 31: 32, 8: 17, 40: 17}, 'type_distribution': {1: 139709, 3: 90540, 2: 58963}}
+2025-02-17 20:28:14,910 - FashionDataset - INFO - Fetching sample batch...
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Sample keys: dict_keys(['image', 'heatmap', 'attributes', 'category_label', 'category_type', 'image_name'])
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Image shape: torch.Size([3, 224, 224])
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Heatmap shape: torch.Size([1, 224, 224])
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Attributes shape: torch.Size([50])
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Category label: tensor(18)
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Category type: tensor(1)
+2025-02-17 20:28:14,931 - FashionDataset - INFO - Testing DataLoader...
+2025-02-17 20:28:15,090 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
+2025-02-17 20:28:15,304 - FashionDataset - INFO - DataLoader test completed successfully
+2025-02-17 20:39:13,843 - FashionDataset - INFO - Creating dataset instance...
+2025-02-17 20:39:13,843 - FashionDataset - INFO - Initializing FashionDataset with metadata: data/processed/metadata_updated.csv
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Loaded metadata with 289212 entries
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-17 20:39:15,065 - FashionDataset - INFO - Validating dataset files...
+2025-02-17 20:39:15,113 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-17 20:39:15,113 - FashionDataset - INFO - Dataset initialized with 289212 samples
+2025-02-17 20:39:15,113 - FashionDataset - INFO - Calculating dataset statistics...
+2025-02-17 20:39:15,131 - FashionDataset - INFO - Dataset statistics: {'num_samples': 289212, 'num_attributes': 50, 'num_categories': 46, 'attribute_distributions': {'mesh': {0: 284103, 1: 5109}, 'slim': {0: 285717, 1: 3495}, 'hem': {0: 285800, 1: 3412}, 'hooded': {0: 285254, 1: 3958}, 'trim': {0: 284210, 1: 5002}}, 'category_distribution': {41: 72148, 18: 36887, 3: 24557, 32: 19666, 17: 15429, 33: 14773, 6: 13311, 16: 13123, 11: 10467, 19: 10078, 2: 7495, 48: 7408, 26: 7076, 42: 6153, 30: 5013, 29: 4416, 10: 4048, 34: 3048, 44: 2294, 39: 2120, 24: 1669, 35: 1106, 15: 791, 12: 748, 9: 716, 13: 676, 27: 594, 22: 527, 23: 486, 36: 386, 5: 330, 7: 324, 4: 309, 1: 160, 47: 150, 20: 146, 43: 126, 14: 97, 21: 77, 46: 70, 37: 54, 25: 49, 28: 45, 31: 32, 8: 17, 40: 17}, 'type_distribution': {1: 139709, 3: 90540, 2: 58963}}
+2025-02-17 20:39:15,131 - FashionDataset - INFO - Fetching sample batch...
+2025-02-17 20:39:15,154 - FashionDataset - INFO - Sample keys: dict_keys(['image', 'heatmap', 'attributes', 'category_label', 'category_type', 'image_name'])
+2025-02-17 20:39:15,154 - FashionDataset - INFO - Image shape: torch.Size([3, 224, 224])
+2025-02-17 20:39:15,155 - FashionDataset - INFO - Heatmap shape: torch.Size([1, 224, 224])
+2025-02-17 20:39:15,155 - FashionDataset - INFO - Attributes shape: torch.Size([50])
+2025-02-17 20:39:15,155 - FashionDataset - INFO - Category label: tensor(18)
+2025-02-17 20:39:15,157 - FashionDataset - INFO - Category type: tensor(1)
+2025-02-17 20:39:15,157 - FashionDataset - INFO - Testing DataLoader...
+2025-02-17 20:39:15,270 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
+2025-02-17 20:39:15,490 - FashionDataset - INFO - DataLoader test completed successfully
+2025-02-18 15:38:48,505 - FashionDataset - INFO - Creating dataset instance...
+2025-02-18 15:38:48,505 - FashionDataset - INFO - Initializing FashionDataset with metadata: data/processed/metadata_updated.csv
+2025-02-18 15:38:49,588 - FashionDataset - INFO - Loaded metadata with 289212 entries
+2025-02-18 15:38:49,601 - FashionDataset - INFO - Using transforms: Compose(
+    RandomHorizontalFlip(p=0.5)
+    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=None)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+2025-02-18 15:38:49,601 - FashionDataset - INFO - Extracted 50 attribute columns
+2025-02-18 15:38:49,604 - FashionDataset - INFO - Created category mapping with 46 categories
+2025-02-18 15:38:49,604 - FashionDataset - INFO - Enabling LRU cache with size 100
+2025-02-18 15:38:49,604 - FashionDataset - INFO - Validating dataset files...
+2025-02-18 15:38:49,663 - FashionDataset - INFO - Validated 100 random samples, all files exist
+2025-02-18 15:38:49,663 - FashionDataset - INFO - Dataset initialized with 289212 samples
+2025-02-18 15:38:49,663 - FashionDataset - INFO - Calculating dataset statistics...
+2025-02-18 15:38:49,687 - FashionDataset - INFO - Dataset statistics: {'num_samples': 289212, 'num_attributes': 50, 'num_categories': 46, 'attribute_distributions': {'mesh': {0: 284103, 1: 5109}, 'slim': {0: 285717, 1: 3495}, 'hem': {0: 285800, 1: 3412}, 'hooded': {0: 285254, 1: 3958}, 'trim': {0: 284210, 1: 5002}}, 'category_distribution': {41: 72148, 18: 36887, 3: 24557, 32: 19666, 17: 15429, 33: 14773, 6: 13311, 16: 13123, 11: 10467, 19: 10078, 2: 7495, 48: 7408, 26: 7076, 42: 6153, 30: 5013, 29: 4416, 10: 4048, 34: 3048, 44: 2294, 39: 2120, 24: 1669, 35: 1106, 15: 791, 12: 748, 9: 716, 13: 676, 27: 594, 22: 527, 23: 486, 36: 386, 5: 330, 7: 324, 4: 309, 1: 160, 47: 150, 20: 146, 43: 126, 14: 97, 21: 77, 46: 70, 37: 54, 25: 49, 28: 45, 31: 32, 8: 17, 40: 17}, 'type_distribution': {1: 139709, 3: 90540, 2: 58963}}
+2025-02-18 15:38:49,687 - FashionDataset - INFO - Fetching sample batch...
+2025-02-18 15:38:49,750 - FashionDataset - INFO - Sample keys: dict_keys(['image', 'heatmap', 'attributes', 'category_label', 'category_type', 'image_name'])
+2025-02-18 15:38:49,750 - FashionDataset - INFO - Image shape: torch.Size([3, 224, 224])
+2025-02-18 15:38:49,750 - FashionDataset - INFO - Heatmap shape: torch.Size([1, 224, 224])
+2025-02-18 15:38:49,750 - FashionDataset - INFO - Attributes shape: torch.Size([50])
+2025-02-18 15:38:49,750 - FashionDataset - INFO - Category label: tensor(18)
+2025-02-18 15:38:49,754 - FashionDataset - INFO - Category type: tensor(1)
+2025-02-18 15:38:49,754 - FashionDataset - INFO - Testing DataLoader...
+2025-02-18 15:38:49,869 - FashionDataset - INFO - First batch shapes: Image torch.Size([4, 3, 224, 224]), Heatmap torch.Size([4, 1, 224, 224])
+2025-02-18 15:38:50,077 - FashionDataset - INFO - DataLoader test completed successfully
