@@ -32,6 +32,7 @@ class FashionDataset(Dataset):
     
     def __init__(self, metadata_path, cropped_images_dir, heatmaps_dir, transform=None, 
                  use_cache=True, cache_size=100, validate_files=True):
+       
         """
         Args:
             metadata_path (str): Path to metadata CSV file
@@ -44,7 +45,7 @@ class FashionDataset(Dataset):
         """
         super().__init__()
         logger.info(f"Initializing FashionDataset with metadata: {metadata_path}")
-        
+        print((f"Loading metadata from: {metadata_path}"))
         # Validate paths
         if not os.path.exists(metadata_path):
             logger.error(f"Metadata file not found: {metadata_path}")
@@ -102,13 +103,13 @@ class FashionDataset(Dataset):
         
         # Caching
         self.use_cache = use_cache
-        if use_cache:
-            logger.info(f"Enabling LRU cache with size {cache_size}")
-            self.load_image = lru_cache(maxsize=cache_size)(self._load_image)
-            self.load_heatmap = lru_cache(maxsize=cache_size)(self._load_heatmap)
-        else:
-            self.load_image = self._load_image
-            self.load_heatmap = self._load_heatmap
+        # if use_cache:
+        #     logger.info(f"Enabling LRU cache with size {cache_size}")
+        #     self.load_image = lru_cache(maxsize=cache_size)(self._load_image)
+        #     self.load_heatmap = lru_cache(maxsize=cache_size)(self._load_heatmap)
+        # else:
+        self.load_image = self._load_image
+        self.load_heatmap = self._load_heatmap
         
         # Validate files if requested
         if validate_files:
@@ -130,6 +131,8 @@ class FashionDataset(Dataset):
             
             # Check image file
             img_path = os.path.join(self.cropped_images_dir, row['image_name'])
+            
+
             if not os.path.exists(img_path):
                 missing_images += 1
                 logger.warning(f"Image not found: {img_path}")
@@ -291,63 +294,63 @@ class FashionDataset(Dataset):
         return stats
 
 # Example usage
-# if __name__ == "__main__":
-#     # Path configuration
-#     metadata_path = "data/processed/metadata_updated.csv"
-#     cropped_images_dir = "data/processed/cropped_images"
-#     heatmaps_dir = "data/processed/heatmaps"
+if __name__ == "__main__":
+    # Path configuration
+    metadata_path = "data/processed/metadata_updated.csv"
+    cropped_images_dir = "data/processed/cropped_images"
+    heatmaps_dir = "data/processed/heatmaps"
     
-#     # Define transforms with augmentation for training
-#     train_transform = transforms.Compose([
-#         transforms.RandomHorizontalFlip(),
-#         transforms.RandomRotation(10),
-#         transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-#         transforms.ToTensor(),
-#         transforms.Normalize(mean=[0.485, 0.456, 0.406],
-#                              std=[0.229, 0.224, 0.225])
-#     ])
+    # Define transforms with augmentation for training
+    train_transform = transforms.Compose([
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomRotation(10),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
+    ])
     
-#     logger.info("Creating dataset instance...")
+    logger.info("Creating dataset instance...")
     
-#     # Create dataset
-#     dataset = FashionDataset(
-#         metadata_path=metadata_path,
-#         cropped_images_dir=cropped_images_dir,
-#         heatmaps_dir=heatmaps_dir,
-#         transform=train_transform,
-#         use_cache=True,
-#         cache_size=100,
-#         validate_files=True
-#     )
+    # Create dataset
+    dataset = FashionDataset(
+        metadata_path=metadata_path,
+        cropped_images_dir=cropped_images_dir,
+        heatmaps_dir=heatmaps_dir,
+        transform=train_transform,
+        use_cache=True,
+        cache_size=100,
+        validate_files=True
+    )
     
-#     logger.info(f"Dataset initialized with {len(dataset)} samples")
+    logger.info(f"Dataset initialized with {len(dataset)} samples")
     
-#     # Get dataset statistics
-#     stats = dataset.get_stats()
-#     logger.info(f"Dataset statistics: {stats}")
+    # Get dataset statistics
+    stats = dataset.get_stats()
+    logger.info(f"Dataset statistics: {stats}")
     
-#     # Example batch
-#     logger.info("Fetching sample batch...")
-#     sample = dataset[0]
+    # Example batch
+    logger.info("Fetching sample batch...")
+    sample = dataset[0]
     
-#     logger.info("Sample keys: %s", sample.keys())
-#     logger.info("Image shape: %s", sample['image'].shape)
-#     logger.info("Heatmap shape: %s", sample['heatmap'].shape)
-#     logger.info("Attributes shape: %s", sample['attributes'].shape)
-#     logger.info("Category label: %s", sample['category_label'])
-#     logger.info("Category type: %s", sample['category_type'])
+    logger.info("Sample keys: %s", sample.keys())
+    logger.info("Image shape: %s", sample['image'].shape)
+    logger.info("Heatmap shape: %s", sample['heatmap'].shape)
+    logger.info("Attributes shape: %s", sample['attributes'].shape)
+    logger.info("Category label: %s", sample['category_label'])
+    logger.info("Category type: %s", sample['category_type'])
     
-#     # Test DataLoader
-#     logger.info("Testing DataLoader...")
-#     from torch.utils.data import DataLoader
+    # Test DataLoader
+    logger.info("Testing DataLoader...")
+    from torch.utils.data import DataLoader
     
-#     loader = DataLoader(dataset, batch_size=4, shuffle=True, num_workers=0)
+    loader = DataLoader(dataset, batch_size=4, shuffle=True, num_workers=0)
     
-#     for i, batch in enumerate(loader):
-#         if i == 0:
-#             logger.info(f"First batch shapes: Image {batch['image'].shape}, Heatmap {batch['heatmap'].shape}")
+    for i, batch in enumerate(loader):
+        if i == 0:
+            logger.info(f"First batch shapes: Image {batch['image'].shape}, Heatmap {batch['heatmap'].shape}")
         
-#         if i >= 2:  # Only test a few batches
-#             break
+        if i >= 2:  # Only test a few batches
+            break
     
-#     logger.info("DataLoader test completed successfully")
+    logger.info("DataLoader test completed successfully")

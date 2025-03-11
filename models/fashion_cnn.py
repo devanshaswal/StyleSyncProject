@@ -1,7 +1,8 @@
+import logging
+
 import torch
 import torch.nn as nn
 import torchvision.models as models
-import logging
 
 # Setup logging
 logging.basicConfig(
